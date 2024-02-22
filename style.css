@@ -1,0 +1,131 @@
+body{
+    margin: 0px;
+}
+#home{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 25px;
+    background-image: url("r2.png");
+    min-height: 300px; 
+    padding-bottom: 150px;   
+}
+
+
+/* logo */
+.logo{
+    margin-top: 5px;
+    margin-bottom: 7px;
+    padding-left: 3px;
+}
+
+/* ikona menu */
+.nav-toggle{
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.nav-toggle:hover{ 
+border: 4px solid black; 
+}
+/* logo+menu */
+.nav-header{
+
+width: 100%;
+display: flex;
+/* flex -> zrób kolumny */
+justify-content: space-between;
+/* justify.. ->przesuń kolumny na boki */
+align-items: center;
+   
+}
+.links-container{
+    background-color: aliceblue;
+    margin-top: -7px;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+/* kl JS .show-links */
+.show-links{
+    height: 100px;
+    
+}
+ul{
+    list-style-type: none;
+    color: blue;
+    background-color: aliceblue;
+}
+
+a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.banner{
+    height: auto;
+    /* jesli brak {height: auto} linki nie beda widoczne */
+    display: none;
+    
+}
+
+.section{
+    text-align: center;
+    text-align: justify;
+    /* justify-wyjustowanie */ 
+    width: 70%;
+    padding: 5px;
+    margin: auto;
+    border: 3px solid white;
+    border-radius: 16px;
+    color: black;
+    font-style: oblique; 
+}
+.title{
+    background-color: gray;
+    text-align: center;
+}
+/* ważne @media creen 800px=duży ekran nie ma przycisku manu*/
+@media screen and (min-width: 800px){
+    .nav-center{
+        max-width: 1117px;
+        margin: 0;
+    }
+    /* ikona menu */
+    .nav-toggle{
+        height: auto;
+        /* jesli brak {height: auto} linki nie beda widoczne */
+       display: none;   
+    } 
+    .links-container{
+        width: 118.5%;
+        margin-top: -7px;
+        height: auto;
+
+        display: relative; 
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        gap: 3.1em;
+        /* przerwa między słowami */
+        margin: 5px;
+        padding-bottom: 5px; 
+        color: blue;
+        background-color: aliceblue;
+    }
+    .banner{
+        display: flex; 
+        /* aby banner był wydoczny konieczne display: flex; */
+        text-align: center;
+        text-align: justify;  
+        width: 350px;
+        padding: 5px;
+        margin: auto;
+        border: 3px solid white;
+        border-radius: 16px;
+        margin-top: 320px;
+        color: black;
+        font-style: oblique;
+    }
+}
+
+
